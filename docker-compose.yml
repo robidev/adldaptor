@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+
+  adldap:
+    build:
+      context: .
+    image: adldap
+    ports:
+      - 389:10389
+#    volumes:
+#      - ./server/:/usr/src/app/server/
+#    command: ["python3", "server/server.py"]
