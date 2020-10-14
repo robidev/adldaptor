@@ -1,6 +1,6 @@
 # adldaptor
 
-This minimal version of an ldap server will try to mimic Active Directory behavior. This means the UserPrincipalName (UPN) can be used to authenticate.  
+This minimal version of an ldap server will try to mimic Active Directory behavior and runs within a docker container. This means the UserPrincipalName (UPN) can be used to authenticate inside a containerised landscape. This can be useful for testing and CI/CD pipelines, where it is not desirable or feasable to authenticate against a real AD, but openldap deviates too much in behavior.  
 
 The project uses the ldaptor python library, and the code is a slight modification of one of the provided examples. Therefore all credit should go to the creators of ldaptor https://github.com/twisted/ldaptor Without their great library, none of this would be possible.
 
