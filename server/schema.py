@@ -16,7 +16,7 @@ COMPANY = (
     },
 )
 PEOPLE = (
-    "OU=Alliander",
+    "OU=ExampleUnit",
     {
         "OU": ["ExampleUnit"],
         "description": ["People from Example inc."],
