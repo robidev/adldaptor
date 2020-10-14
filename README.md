@@ -2,7 +2,7 @@
 
 This minimal version of an ldap server will try to mimic Active Directory behavior. This means the UserPrincipalName (UPN) can be used to authenticate.  
 
-The project uses the ldaptor python library, and the code is a slight modification of one of the provided examples. Therefore all credit should go to the creators of ldaptor https://github.com/twisted/ldaptor Whithout their great library, none of this would be possible.
+The project uses the ldaptor python library, and the code is a slight modification of one of the provided examples. Therefore all credit should go to the creators of ldaptor https://github.com/twisted/ldaptor Without their great library, none of this would be possible.
 
 To avoid compatibility issues it will ignore the reported ldap versioning. instead it will always blindly assume an anonymous bind.
 
@@ -14,7 +14,7 @@ schema.py defines the LDAP schema plus the database values. You can modify it to
 
 ## Docker-compose file
 
-The docker-compose file provides an easy way to get the ldap server running. By default it exposes the standard ldap port 389 on the local host, to the internal defalt port 10389. 10389 is chosen to allow the ldap server not to run as root inside the container.  
+The docker-compose file provides an easy way to get the ldap server running. By default it exposes the standard ldap port 389 on the local host, to the internal default port 10389. 10389 is chosen to allow the ldap server not to run as root inside the container.  
 If you need this container to run on port 389, you have to set it to run as root, by commenting out `USER appuser` in the file `Dockerfile`, and changing the CMD to `CMD ["python3", "server.py","389"`. Additionally, the `ports:` section will need to be updated in the docker-compose file `docker-compose.yml`
 
 ## Prerequisites
